@@ -57,10 +57,11 @@ https://en.bem.info/methodology/quick-start/*/
 /*Sección Menu*/
 
 .menu{
-    background-color: rgb(215, 242, 212);
+    background-color: #F5F5F5;
     display: flex;
     justify-content: space-between;
     padding: 10px;
+    
 }
 
 .menu__header{
@@ -90,31 +91,37 @@ https://en.bem.info/methodology/quick-start/*/
 /*Sección Title me mueve la imagen y el texto de la descripcion*/
 
 section.title{
-    background-color: rgb(222, 243, 220);
-    display: inline-block;
+    background-color: #F5F5F5;
+    display: flex;
+    flex-direction: column;
     padding: 10px;
 }
 
 
 .title__container{
-    background-color: beige;
-   
+    background-color: #F5F5F5;
 }
 
 .title__profile{
    height: 98px;
-    display: flex;
+   display: flex;
+}
+
+.title__profile{
+   width: 200px;
+   height: auto;
 }
 
 .title__bio{
     font-size: 22px;
     padding: 10px;
-    
+
 }
 
 .title__subsection{
     font-size: 14px;
     font-weight: 300;
+    padding: 10px;
 }
 
 /*titulo redes*/
@@ -134,14 +141,17 @@ section.title{
 
 section.about{
     padding: 10px;
+    background-color: #daecf9;
 }
 
 .about__title{
     font-size: 22px;
+    padding: 10px;
 }
 
 .about__paragraph{
     font-size: 14px;
+    padding: 10px;
 }
 
 /*seccion skills*/
@@ -154,6 +164,7 @@ section.about{
 
 .skills__title, .hobbies__title{
     text-align: center;
+    padding: 10px;
 }
 
 .skills__line, .hobbies__line{
@@ -237,7 +248,6 @@ section.academic{
 
 section.experience{
     padding: 10px;
-    background-color: hwb(207 59% 16%);
     display: flex;
     gap: 10px;
     flex-direction: column;
@@ -252,6 +262,7 @@ section.experience{
     display: flex;
     gap: 10px;
     flex-direction: column;
+   
 }
 
 .experience__img{
@@ -279,33 +290,32 @@ section.experience{
     gap: 10px;
 }
 
+/*bordes, colores botones de link repositorio*/
 .link-repo{
     padding: 10px;
-    background-color: #F5F5F5;
+    background-color:#83cbfb;
+    color: #000000;
 }
 
 .link-repo:hover{
-    background: #69bcf4;
-    color: rgb(19, 21, 23);
+    background: #16d6f3;
+    color: #F5F5F5;
+    border-radius: 5px;
 }
 
+/*colores y bordes de ver demo*/
 .link-demo{
     padding: 10px;
-    border: 1px solid rgb(29, 22, 22);
+    border: 1px solid rgb(16, 17, 19);
+    border-radius: 5px;
+    color: #000000;
 }
 
 .link-demo:hover{
-    background: #a9f35f;
-    color: rgb(19, 21, 23);
+    background: #83cbfb;
+    color: #F5F5F5;
+    border-radius: 5px;
 }
-
-
-
-
-
-
-
-
 
 /*Contacto*/
 
@@ -313,13 +323,21 @@ section.experience{
     display: none;
 }
 
+.formcontato__text{
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+
 .formcontato__title{
     font-size: 22px;
+    display: flex;
 }
 
 .formcontato__subtext{
     font-size: 16px;
     font-weight: 300;
+    
 }
 
 .formcontato__form{
@@ -343,13 +361,16 @@ section.experience{
     border: none;
     width: 200px;
     cursor: pointer;
+    border-radius: 5px;
 }
 
 /*footeer*/
 
 section.footer{
-   text-align: center;
-   padding: 10px;
+    padding: 10px;
+    text-align: center;
+
+
 }
 
 /* Vamos a desafiarnos trabajando con responsividad?
@@ -357,14 +378,44 @@ Utiliza las referencias de los breakpoints @media abajo */
 
 
 /*Tablet*/
-@media (min-width: 768px) {
+@media (min-width: 834px) {
+    
+/*title*/
+section.title{
+    flex-direction: row-reverse;
+    padding: 30px;
+}
+
+.img-title__profile{
+    background: #0892ee;
+    text-shadow: #000000;
+}
+
+.title__profile, .img{
+    display: flex;
+    gap: 10px;
+    justify-content: right;
+}
+
+.menu{
+    padding: 30px;
+}
+
+}
 
 /* Menú */
 
-.section.menu{
-  display: flex;
-}
-/*title*/
+
+
+
+
+
+
+
+
+
+
+
 
 /*Skills*/
 
@@ -374,10 +425,8 @@ Utiliza las referencias de los breakpoints @media abajo */
 
 /*Experiencia Profesional*/
 
-}
-
-/*Mobile*/
-@media (min-width: 425px) {
+/*pc*/
+@media (min-width: 1440px) {
 
 /*Menu*/
 
