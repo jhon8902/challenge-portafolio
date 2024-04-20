@@ -83,6 +83,10 @@ https://en.bem.info/methodology/quick-start/*/
     display: none;
 }
 
+.menu__list__item a, .title__network__item a{
+    color: #000000;
+}
+
 .menu__list__item:nth-child(6) {
     display: block;
 }
@@ -490,6 +494,14 @@ Utiliza las referencias de los breakpoints @media abajo */
 
     section.title {
         align-items: center;
+    }
+
+    .menu__item{
+        gap: 35px;
+    }
+
+    .menu__list__item{
+        display: block;
     }
 
     .title__profile {
