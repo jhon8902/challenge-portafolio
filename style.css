@@ -14,14 +14,15 @@ coloque nas sessões indicadas*/
 :root {
     /* Inserta la variable de los otros colores inspeccionando el exemplo de figma */
     /*Se esforce para trabalhar com variáveis, é uma dica profissional valiosa*/
-    --cor-de-fundo: #F5F5F5;
+    --cor-de-fundo:#1dd1f0;
     --cor-de-link: #000;
 
 }
 
 body {
+    
     box-sizing: border-box;
-    background-color: var(--cor-de-fundo #F5F5F5);
+    background-color: var(--cor-de-fundo #1dd1f0);
     font-family: 'Raleway';
     padding: 0;
     line-height: 20px;
@@ -73,22 +74,23 @@ https://en.bem.info/methodology/quick-start/*/
 
 }
 
-/*solo titulo jhon aparicio*/
+/*titulo jhon aparicio*/
 .menu__title {
     display: flex;
-
 }
 
 .menu__list__item {
     display: none;
+    padding: 10px;
 }
 
 .menu__list__item a, .title__network__item a{
-    color: #000000;
+    color: #040d18;
 }
 
 .menu__list__item:nth-child(6) {
     display: block;
+  
 }
 
 .menu__list__item a {
@@ -98,11 +100,16 @@ https://en.bem.info/methodology/quick-start/*/
 /*Sección Title me mueve la imagen y el texto de la descripcion*/
 
 section.title {
+    
     background-color: #F5F5F5;
     display: flex;
     flex-direction: column;
     gap: 10px;
     padding: 10px;
+}
+
+.title__profile, .img{
+    border-radius: 50%;
 }
 
 
@@ -123,8 +130,10 @@ section.title {
     height: auto;
 }
 
+/*mi nombre es...*/
 .title__bio {
     font-size: 22px;
+    padding: 10px;
 }
 
 .title__subsection {
@@ -225,7 +234,6 @@ section.about {
 .hobbies__box li {
     text-align: left;
 }
-
 
 
 /* Experiencia Académica*/
@@ -423,8 +431,9 @@ Utiliza las referencias de los breakpoints @media abajo */
 /*Tablet*/
 @media (min-width: 834px) {
 
-    /*title*/
+    /*seccion title hola mi nombre es*/
     section.title {
+        background: #cccccc;
         flex-direction: row-reverse;
         padding: 30px;
     }
@@ -441,8 +450,29 @@ Utiliza las referencias de los breakpoints @media abajo */
         justify-content: right;
     }
 
+    .title__bio{
+        padding: 20px;
+        text-align: center;
+    }
+
+    /*modificar version table soy aprendeiz acusioso*/
+    .title__subsection{
+        text-align: center;
+    }
+
+    /*enlaces redes sociales*/
+    .title__network{
+        padding: 35px;
+    }
+
+    /*menu principal*/
     .menu {
-        padding: 30px;
+        padding: 20px;
+        background-color: #109af6;  
+    }
+    /*contenedor title__bio, title__subsection y title__network*/
+    .title__container{
+        padding-right: 60px;
     }
 
     section.about,
@@ -497,18 +527,19 @@ Utiliza las referencias de los breakpoints @media abajo */
     }
 
     .menu__item{
-        gap: 35px;
+        gap: 35px; 
     }
 
     .menu__list__item{
         display: block;
     }
 
+    /*
     .title__profile {
         height: 368px;
         width: auto;
     }
-
+    */
     .title__bio {
         font-size: 52px;
         line-height: 50px;
@@ -543,8 +574,9 @@ Utiliza las referencias de los breakpoints @media abajo */
     .skills__line,
     .hobbies__line {
         grid-template-columns: repeat(6, 1fr);
-        gap: 25px;
+        gap: 100px;
     }
+
 
     section.academic {
         gap: 32px;
