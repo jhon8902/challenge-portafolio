@@ -4,32 +4,17 @@
     box-sizing: border-box;
 }
 
-
-/*CSS Reset / Normalize*/
-/* Hemos disponibilizado el básico de reset de estilos. Si quieren, añadan más informaciones 
-en las secciones señaladas */
-/*Já deixaremos o básico de reset de estilos. Caso queira adicionar mais informações
-coloque nas sessões indicadas*/
-
-:root {
-    /* Inserta la variable de los otros colores inspeccionando el exemplo de figma */
-    /*Se esforce para trabalhar com variáveis, é uma dica profissional valiosa*/
-    --cor-de-fundo:#1dd1f0;
-    --cor-de-link: #000;
-
-}
-
 body {
     
     box-sizing: border-box;
-    background-color: var(--cor-de-fundo #1dd1f0);
     font-family: 'Raleway';
     padding: 0;
     line-height: 20px;
     position: relative;
+    background: #e5e5e5;
 }
 
-/*me mueve el contenido de las listas*/
+/*contenido de las listas*/
 ol,
 ul,
 li {
@@ -45,32 +30,22 @@ a {
 
 }
 
-/*En este desafío nosostros gustaríamos que ustedes intentaran utilizar la metodología BEM. 
-
-Lo que es el BEM?
-
-BEM (Bloque, Elemento, Modificador) es un enfoque basado en componentes para el 
-desarrollo web. La idea detrás de esto es dividir la interfaz de usuario en bloques
-independientes. Esto hace que el desarrollo de la interfaz sea fácil y rápido, incluso
-con una interfaz de usuario compleja, y permite la reutilización del código existente sin copiar y pegar.
-
-Enlace de la documentación oficial!
-https://en.bem.info/methodology/quick-start/*/
-
 
 /*Sección Menu*/
 
 .menu {
-    background-color: #F5F5F5;
+    background-color: #f5f5f5;
     display: flex;
     justify-content: space-between;
     padding: 10px;
+    background-color: #10b1f6;
 
 }
 
 .menu__header {
     display: flex;
     gap: 10px;
+    align-items: center;
 
 }
 
@@ -100,12 +75,12 @@ https://en.bem.info/methodology/quick-start/*/
 /*Sección Title me mueve la imagen y el texto de la descripcion*/
 
 section.title {
-    
+    border-bottom: #000000;
     background-color: #F5F5F5;
     display: flex;
     flex-direction: column;
-    gap: 10px;
     padding: 10px;
+    background: #cccccc;
 }
 
 .title__profile, .img{
@@ -114,38 +89,40 @@ section.title {
 
 
 .title__container {
-    background-color: #F5F5F5;
+   
     display: flex;
     flex-direction: column;
-    gap: 10px;
+   
 }
 
 .title__profile {
-    height: 98px;
+    
     display: flex;
 }
 
 .title__profile {
     width: 200px;
-    height: auto;
+    aspect-ratio: 1/1;
 }
 
 /*mi nombre es...*/
 .title__bio {
     font-size: 22px;
     padding: 10px;
+    
 }
 
 .title__subsection {
     font-size: 14px;
     font-weight: 300;
+    text-wrap: balance;
 }
 
 /*titulo redes*/
 .title__network {
     display: flex;
     justify-content: center;
-    gap: 15px;
+    gap: 10px;
 
 }
 
@@ -155,7 +132,12 @@ section.title {
 }
 
 .title__network__item a {
-    padding: 0;
+    padding: 10px;
+}
+
+.title__network__item a img{
+    width: 20px;
+    height: 20px;
 }
 
 /*Sección About sobre mi */
@@ -190,6 +172,7 @@ section.about {
     display: flex;
     flex-direction: column;
     padding: 10px;
+    padding-bottom: 0;
     gap: 15px;
 }
 
@@ -325,6 +308,7 @@ section.experience {
 .experience__description {
     display: flex;
     gap: 10px;
+    padding: 10px;
 }
 
 /*bordes, colores botones de link repositorio*/
@@ -335,7 +319,7 @@ section.experience {
 }
 
 .link-repo:hover {
-    background: #16d6f3;
+    background: #10b1f6;
     color: #F5F5F5;
     border-radius: 5px;
 }
@@ -343,13 +327,13 @@ section.experience {
 /*colores y bordes de ver demo*/
 .link-demo {
     padding: 10px;
-    border: 1px solid rgb(16, 17, 19);
+    border: 2px solid rgb(106, 153, 249);
     border-radius: 5px;
     color: #000000;
 }
 
 .link-demo:hover {
-    background: #83cbfb;
+    background: #10b1f6;
     color: #F5F5F5;
     border-radius: 5px;
 }
@@ -405,12 +389,12 @@ section.formcontato {
     outline: none;
     border: none;
     resize: none;
-    border-bottom: 2px solid #69bcf4;
+    border-bottom: 2px solid #93d0f9;
 }
 
 .formcontato__botao {
     padding: 10px;
-    background-color: #69bcf4;
+    background-color: #93d0f9;
     border: none;
     width: 200px;
     cursor: pointer;
@@ -429,18 +413,20 @@ Utiliza las referencias de los breakpoints @media abajo */
 
 
 /*Tablet*/
-@media (min-width: 834px) {
-
+@media (width> 834px) {
     /*seccion title hola mi nombre es*/
     section.title {
+        align-items: center;
         background: #cccccc;
         flex-direction: row-reverse;
         padding: 30px;
+        padding-right: 60px;
     }
 
     .img-title__profile {
         background: #0892ee;
         text-shadow: #000000;
+       
     }
 
     .title__profile,
@@ -453,6 +439,7 @@ Utiliza las referencias de los breakpoints @media abajo */
     .title__bio{
         padding: 20px;
         text-align: center;
+        text-wrap: balance;
     }
 
     /*modificar version table soy aprendeiz acusioso*/
@@ -468,11 +455,12 @@ Utiliza las referencias de los breakpoints @media abajo */
     /*menu principal*/
     .menu {
         padding: 20px;
-        background-color: #109af6;  
+        background-color: #10b1f6;  
     }
     /*contenedor title__bio, title__subsection y title__network*/
-    .title__container{
-        padding-right: 60px;
+    .title{
+        display: flex ;
+        gap: 60px ;
     }
 
     section.about,
@@ -482,11 +470,19 @@ Utiliza las referencias de los breakpoints @media abajo */
     section.academic,
     section.formcontato {
         padding: 30px;
+        padding-bottom: 0;
+    }
+
+
+    section.hobbies, 
+    section.academic{
+        padding: 30px;
     }
 
     .skills__line,
     .hobbies__line {
         grid-template-columns: repeat(3, 1fr);
+
     }
 
     .academic__courses__item__img img {
@@ -520,11 +516,14 @@ Utiliza las referencias de los breakpoints @media abajo */
     section.academic,
     section.formcontato {
         padding: 80px;
+        padding-bottom: 10px;
     }
+
 
     section.title {
         align-items: center;
     }
+
 
     .menu__item{
         gap: 35px; 
